@@ -1,0 +1,34 @@
+name: Chrome Web Store Upload
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build extension package
+        run: npm run build
+
+      - name: Upload to Chrome Web Store
+        uses: mobilefirstllc/cws-publish@latest
+        with:
+          action: 'upload'
+          client_id: ${{ secrets.CHROME_WEB_STORE_CLIENT_ID }}
+          client_secret: ${{ secrets.CHROME_WEB_STORE_CLIENT_SECRET }}
+          refresh_token: ${{ secrets.CHROME_WEB_STORE_REFRESH_TOKEN }}
+          extension_id: ${{ secrets.CHROME_WEB_STORE_EXTENSION_ID }}
+          zip_file: 'extension.zip'
