@@ -9,7 +9,7 @@
         "https://itch.io/bundle/download/*"
       ],
       "js": [
-        "add-to-library.js"
+        "itchio-bundle-auto-add-content-script.js"
       ],
       "run_at": "document_idle"
     }

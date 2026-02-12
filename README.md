@@ -1,6 +1,6 @@
 # itch.io Add Bundle to Library (Chrome Extension)
 
-This repository is a Chrome extension that injects `add-to-library.js` on:
+This repository is a Chrome extension that injects `itchio-bundle-auto-add-content-script.js` on:
 
 - `https://itch.io/bundle/download/*`
 

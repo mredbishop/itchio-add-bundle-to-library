@@ -2,13 +2,11 @@
   "compilerOptions": {
     "target": "ES2019",
     "lib": ["DOM", "ES2019"],
-    "module": "ES2020",
-    "moduleResolution": "Bundler",
+    "module": "none",
     "strict": true,
     "noEmitOnError": true,
-    "rootDir": "src",
-    "outDir": "dist",
+    "outFile": "dist/itchio-bundle-auto-add-content-script.js",
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*.ts"]
+  "files": ["src/itchio-bundle-auto-add-content-script.ts"]
 }
