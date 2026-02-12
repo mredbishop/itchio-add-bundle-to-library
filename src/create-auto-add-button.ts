@@ -17,7 +17,14 @@ namespace AutoAdd {
     button.style.cursor = "pointer";
     button.style.padding = BUTTON_PADDING;
     button.style.margin = BUTTON_MARGIN;
-    button.style.display = "inline-block";
+    button.style.display = "inline-flex";
+    button.style.alignItems = "center";
+    button.style.justifyContent = "center";
+    button.style.lineHeight = "1.35";
+    button.style.textDecoration = "none";
+    button.style.whiteSpace = "normal";
+    button.style.boxSizing = "border-box";
+    button.style.maxWidth = "calc(100% - 64px)";
 
     const anchor = gameContainer.querySelector<HTMLParagraphElement>(
       "p:not([class])"
