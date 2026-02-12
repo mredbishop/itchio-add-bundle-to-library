@@ -1,0 +1,15 @@
+{
+  "name": "itchio-add-bundle-to-library",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension to auto-add itch.io bundle games to your library. Heavily inspired by https://greasyfork.org/en/scripts/446312-itch-io-automated-add-bundle-to-library/code",
+  "author": "Ed Bishop", 
+  "license": "MIT",
+  "scripts": {
+    "clean": "node scripts/clean.cjs",
+    "build": "npm run clean && tsc -p tsconfig.json && node scripts/package.cjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

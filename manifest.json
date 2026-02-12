@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "itch.io Bundle Auto Add to Library",
+  "description": "Adds a button on itch.io bundle download pages to auto-add all games to your library.",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://itch.io/bundle/download/*"
+      ],
+      "js": [
+        "add-to-library.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "logo.png"
+  }
+}
